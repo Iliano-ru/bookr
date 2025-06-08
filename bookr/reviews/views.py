@@ -3,4 +3,6 @@ from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse("hi")
+    name = request.GET.get('name', '')
+    # name = request.GET.get('name') or ''
+    return HttpResponse("hi " + name)
