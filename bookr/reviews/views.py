@@ -1,5 +1,7 @@
+
 from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'base.html')
+    name = request.GET.get('name', '')
+    return render(request, 'base.html', {'name': name})
