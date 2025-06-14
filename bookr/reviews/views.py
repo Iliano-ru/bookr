@@ -3,5 +3,8 @@ from django.shortcuts import render
 
 
 def index(request):
-    name = request.GET.get('name', '')
-    return render(request, 'base.html', {'name': name})
+    return render(request, 'base.html')
+
+def search(request):
+    result = request.GET.get('search', 'Введите запрос')
+    return render(request, 'search.html', {'result': result})
