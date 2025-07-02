@@ -64,7 +64,7 @@ class BookContributor(models.Model):
         Book,
         on_delete=models.CASCADE
     )
-    contributors = models.ForeignKey(
+    contributor = models.ForeignKey(
         Contributor,
         on_delete=models.CASCADE
     )
