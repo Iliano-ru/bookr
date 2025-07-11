@@ -1,0 +1,85 @@
+[33mcommit 121d3ac6e3430a2c6f89a9811892118edcab8bee[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: Ilia <n_i_d@bk.ru>
+Date:   Fri Jul 11 21:54:14 2025 +0400
+
+    Revert "self-contained-design"
+    
+    This reverts commit c82d7045190c99cacf7490c30f37fdd424b1ef57.
+
+[33mcommit c82d7045190c99cacf7490c30f37fdd424b1ef57[m
+Author: Ilia <n_i_d@bk.ru>
+Date:   Fri Jul 11 16:16:01 2025 +0400
+
+    self-contained-design
+
+[33mcommit 09772ca47d458f7a2fb37d0ed8b83f585e8feb7b[m[33m ([m[1;31mbookr/master[m[33m)[m
+Author: Ilia <n_i_d@bk.ru>
+Date:   Fri Jul 11 11:17:39 2025 +0400
+
+    chapter-4-end
+
+[33mcommit 9d7fac44076e33de952e1dacc5504b72b22cf39b[m
+Author: Ilia <n_i_d@bk.ru>
+Date:   Sat Jul 5 16:52:40 2025 +0400
+
+    chapter-3-end
+
+[33mcommit 957d65c863e8a7fef298efb134e70608dad63d64[m
+Author: Ilia <n_i_d@bk.ru>
+Date:   Wed Jul 2 23:18:22 2025 +0400
+
+    chapter-3-start
+
+[33mcommit 9ee2d21908faef7f177d56a3ae75187ef0bb0495[m
+Author: Ilia <n_i_d@bk.ru>
+Date:   Wed Jul 2 23:05:14 2025 +0400
+
+    chapter-2
+
+[33mcommit 6857f5eacc9df3d5f90c1950dc1baa5b8abbee90[m
+Author: Ilia <n_i_d@bk.ru>
+Date:   Mon Jun 16 13:22:32 2025 +0400
+
+    exercise-2.01
+
+[33mcommit 5fef2d5d79ef6e38a4fb7c81720afae9bdbdaa7c[m
+Author: Ilia <n_i_d@bk.ru>
+Date:   Sat Jun 14 09:48:41 2025 +0400
+
+    activity-1.02
+
+[33mcommit 9b304bb7321bd6ae90276009d3cc6aa511e76b8c[m
+Author: Ilia <n_i_d@bk.ru>
+Date:   Mon Jun 9 22:36:15 2025 +0400
+
+    exercise-7
+
+[33mcommit a1091d21e5b1130111a2db2076bab601fff2e9dd[m
+Author: Ilia <n_i_d@bk.ru>
+Date:   Mon Jun 9 22:29:40 2025 +0400
+
+    exercise-6
+
+[33mcommit 78956bff76f162bfc7b228d5c6e006d3a6e8f34f[m
+Author: Ilia <n_i_d@bk.ru>
+Date:   Mon Jun 9 22:05:19 2025 +0400
+
+    exercise-5
+
+[33mcommit 58d1717e3665a041a81abf675ca6dfb0368fe2aa[m
+Author: Ilia <n_i_d@bk.ru>
+Date:   Sun Jun 8 20:11:50 2025 +0400
+
+    exercise-4
+
+[33mcommit a03cecd0419b403b22202ff803ddc20697cdb812[m
+Author: Ilia <n_i_d@bk.ru>
+Date:   Sun Jun 8 19:20:57 2025 +0400
+
+    exercise-3
+
+[33mcommit b7db243d1033324e0617f73c33051466f6ebe846[m
+Author: Ilia <n_i_d@bk.ru>
+Date:   Fri Jun 6 14:04:20 2025 +0400
+
+    exercise-1
