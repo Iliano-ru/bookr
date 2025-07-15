@@ -1,3 +1,17 @@
-.h1{
-    text-align: center;
+.section-1 {
+    background-image: url(../images/section-1-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.section-1-wrapper {
+    padding: 0 15% calc(100vh - 80px) 15%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }

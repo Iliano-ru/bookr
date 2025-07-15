@@ -1,0 +1,21 @@
+@import url(./components/book-card.css);
+
+.section-1 {
+    background-color: azure;
+}
+
+.section-1-wrapper {
+    padding-top: 100px;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 400px);
+    grid-template-rows: repeat(3, minmax(350px, 1fr));
+    grid-gap: 20px;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+}

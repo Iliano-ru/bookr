@@ -1,27 +1,37 @@
 
 {% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'reviews/styles/main.css' %}">
+{% endblock %}
 {% block content %}
-<h1>Books</h1>
-    {% for book in book_list %}
-<ul class="list-group">
-        <li class="list-group-item">
-            <span class="fw-semibold text-info">Title:</span><span> {{book.title}}</span>
-            </br>
-            <span class="fw-semibold text-info">Publisher:</span><span> {{book.publisher}}</span>
-            </br>
-            <span class="fw-semibold text-info">Publication date</span><span>: {{book.publication_date}}</span>
-            </br>
-            <span class="fw-semibold text-info">Rating:</span><span> {{ book.average_rating }}</span>
-            </br>
-            <span class="fw-semibold text-info">Number of reviews:</span><span> {{book.reviews_count}}</span>
-            {% if book.average_rating is Null %}
-            </br>
-            <span class="text-secondary">Provide a rating and write the first review for this book.</span>
-            {% endif %}
-            </br>
-            <a class="btn btn-primary btn-sm active" role="button" aria-pressed="true" href="/book/{{ item.book.id }}/">Reviews</a>
-        </li>
-</ul>
-    {% endfor %}
+    <section class="section-1">
+        <div class="section-1-wrapper">
+            <div class="h1-wrapper">
+                <h1 class="h1 text-azure bg-grey">Books</h1>
+            </div>
+            <div class="book-list-wrapper">
+            <div class="book-list">
+                {% for book in book_list %}
+                <div class="book-card-wrapper">
+                    <div class="book-card">
+                            <h2 class="book-card__title">{{ book.title }}</h2>
+                            <div>
+                                <p class="book-card__p">Publisher: {{ book.publisher }}</p>
+                                <p class="book-card__p">Publication date: {{ book.publication_date }}</p>
+                                <p class="book-card__p">Rating: {{ book.average_rating }}</p>
+                                <p class="book-card__p">Number of reviews: {{ book.reviews_count }}</p>
+                                {% if book.average_rating is Null %}
+                                <p class="book-card__p book-card__subtext">Provide a rating and write the first review for this book.</p>
+                                {% endif %}
+                                <a role="button" aria-pressed="true" href="/books/{{ book.id }}">Reviews</a>
+                            </div>
+                    </div>
+                </div>
+                    {% endfor %}
+            </div>
+        </div>
 
+        </div>
+    </section>
 {% endblock %}

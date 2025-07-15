@@ -1,0 +1,25 @@
+.nav {
+    align-content: center;
+    justify-content: center;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    align-content: center;
+    justify-content: center;
+    height: 80px;
+    list-style: none;
+}
+
+.navbar-li{
+    font-size: x-large;
+    margin: 0 20px;
+}
+
+.navbar-a{
+    text-decoration: none;
+    color: azure;
+    text-align: center;
+}

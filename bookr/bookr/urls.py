@@ -21,5 +21,5 @@ import home.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('reviews.urls')),
-    path('home/', home.views.index)
+    path('', home.views.index)
 ]
