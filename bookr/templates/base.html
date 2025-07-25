@@ -12,21 +12,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     {% block head %}{% endblock %}
 </head>
-<body>
+<body class="bg-azure">
   <header>
     <nav class="nav fixed-top bg-grey">
       <ul class="navbar">
-        <li class="navbar-li"><a class="navbar-a" href="/">Home</a></li>
-        <li class="navbar-li"><a class="navbar-a" href="books">Books</a></li>
-        <li class="navbar-li"><a class="navbar-a" href="">Log in</a></li>
-        <li style="display: none;" class="navbar-li"><a class="navbar-a" href="">Log out</a></li>
+        <li class="navbar-li"><a class="navbar-a text-white" href="/">Home</a></li>
+        <li class="navbar-li"><a class="navbar-a text-white" href="/books">Books</a></li>
+        <li class="navbar-li"><a class="navbar-a text-white" href="">Log in</a></li>
+        <li style="display: none;" class="navbar-li"><a class="navbar-a text-azure" href="">Log out</a></li>
       </ul>
     </nav>
   </header>
 <div class="block-content">
   {% block content %}{% endblock %}
 </div>
- <footer class="bg-grey text-azure">
+ <footer class="footer bg-grey text-azure">
     <div class="footer-wrapper">&copy;© 2022 Copyright:
       <a href="https://www.packtpub.com"> Packt Publications</a>
       <p>Website by: Packt Publications</p>

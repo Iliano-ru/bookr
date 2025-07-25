@@ -1,31 +1,36 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'reviews/styles/main.css' %}">
+{% endblock %}
 {% block content %}
-<h2>Book Details</h2>
-<ul class="list-group">
-        <li class="list-group-item">
-            <span class="fw-semibold text-info">Title:</span><span> {{book.title}}</span>
-            </br>
-            <span class="fw-semibold text-info">Publisher:</span><span> {{book.publisher}}</span>
-            </br>
-            <span class="fw-semibold text-info">Publication date</span><span>: {{book.publication_date}}</span>
-            </br>
-            <span class="fw-semibold text-info">Rating:</span><span> {{ book.average_rating }}</span>
-        </li>
-</ul>
-<h3>Review Comments</h3>
-{% for review in reviews %}
-<ul class="list-group">
-        <li class="list-group-item">
-            <span class="fw-semibold text-info">Review Comment:</span><span> {{review.content}}</span>
-            </br>
-            <span class="fw-semibold text-info">Created on:</span><span> {{review.date_created}}</span>
-            </br>
-            <span class="fw-semibold text-info">Modified on</span><span>: {{review.date_edited}}</span>
-            </br>
-            <span class="fw-semibold text-info">Rating:</span><span> {{ review.rating }}</span>
-            </br>
-            <span class="fw-semibold text-info">Creator:</span><span> {{ review.creator }}</span>
-        </li>
-</ul>
-{% endfor %}
+    <div class="section-1-wrapper">
+        <section class="section-1">
+            <div class="h1-wrapper">
+                <h1 class="h1 text-azure bg-grey">Book Details</h1>
+            </div>
+            <div class="book-detail-wrapper">
+                <ul class="book-detail-list bg-white">
+                    <li class="book-detail-list-item">
+                        <span class="fw-semibold text-info">Title:</span><span> {{ book.title }}</span><br/>
+                        <span class="fw-semibold text-info">Publisher:</span><span> {{ book.publisher }}</span><br/>
+                        <span class="fw-semibold text-info">Publication date:</span><span> {{ book.publication_date }}</span><br/>
+                        <span class="fw-semibold text-info">Rating:</span><span> {{ book.average_rating }}</span>
+                    </li>
+                </ul>
+                <h3>Review Comments</h3>
+                {% for review in reviews %}
+                    <ul class="book-detail-list bg-white">
+                        <li class="book-detail-list-item">
+                            <span class="fw-semibold text-info">Review Comment:</span><span> {{ review.content }}</span><br/>
+                            <span class="fw-semibold text-info">Created on:</span><span> {{ review.date_created }}</span><br/>
+                            <span class="fw-semibold text-info">Modified on:</span><span> {{ review.date_edited }}</span><br/>
+                            <span class="fw-semibold text-info">Rating:</span><span> {{ review.rating }}</span><br/>
+                            <span class="fw-semibold text-info">Creator:</span><span> {{ review.creator }}</span>
+                        </li>
+                    </ul>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
 {% endblock %}

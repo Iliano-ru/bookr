@@ -5,21 +5,17 @@
 
 .navbar {
     display: flex;
-    flex-wrap: wrap;
     margin: 0;
-    align-content: center;
-    justify-content: center;
     height: 80px;
     list-style: none;
+    gap: 40px;
 }
 
 .navbar-li{
     font-size: x-large;
-    margin: 0 20px;
 }
 
 .navbar-a{
     text-decoration: none;
-    color: azure;
     text-align: center;
 }

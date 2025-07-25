@@ -1,14 +1,28 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
-<link rel="stylesheet" href="{% static 'home/styles/main.css' %}">
+    <link rel="stylesheet" href="{% static 'home/styles/main.css' %}">
 {% endblock %}
 {% block content %}
-<section class="section-1">
-    <div class="section-1-wrapper">
-        <div class="h1-wrapper">
-            <h1 class="h1 text-azure bg-grey">Welcome to Bookr</h1>
-        </div>
+<div class="home-hero">
+    <div class="home-hero-content">
+        <h1>Welcome to Bookr!</h1>
+        <p>Discover the best books, read reviews, and share your impressions.</p>
+        <a href="/books" class="home-hero-btn">Browse Books</a>
     </div>
-</section>
+</div>
+<div class="home-features">
+    <div class="feature">
+        <h2>Book Catalog</h2>
+        <p>A wide selection of books for every taste.</p>
+    </div>
+    <div class="feature">
+        <h2>Reader Reviews</h2>
+        <p>Read opinions of others and share your own.</p>
+    </div>
+    <div class="feature">
+        <h2>Convenient Search</h2>
+        <p>Quickly find the books you need.</p>
+    </div>
+</div>
 {% endblock %}

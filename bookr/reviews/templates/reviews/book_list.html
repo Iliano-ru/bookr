@@ -5,33 +5,36 @@
     <link rel="stylesheet" href="{% static 'reviews/styles/main.css' %}">
 {% endblock %}
 {% block content %}
+<div class="h1-wrapper">
+    <h1 class="h1 text-white bg-grey">Books</h1>
+</div>
+<div class="section-1-wrapper bg-azure">
     <section class="section-1">
-        <div class="section-1-wrapper">
-            <div class="h1-wrapper">
-                <h1 class="h1 text-azure bg-grey">Books</h1>
-            </div>
-            <div class="book-list-wrapper">
+        <div class="book-list-wrapper">
             <div class="book-list">
-                {% for book in book_list %}
-                <div class="book-card-wrapper">
-                    <div class="book-card">
-                            <h2 class="book-card__title">{{ book.title }}</h2>
+                    <div class="search-wrapper bg-white element-shadow">
+                        <form class="search-form" method="get">
+                            {{ form.search }}
+                            <input class="search-button" type="submit" value="Search">
+                        </form>
+                    </div>
+                    {% for book in book_list %}
+                        <div class="book-card bg-white element-shadow">
+                            <h2 class="book-card__title text-grey">{{ book.title }}</h2>
                             <div>
                                 <p class="book-card__p">Publisher: {{ book.publisher }}</p>
                                 <p class="book-card__p">Publication date: {{ book.publication_date }}</p>
                                 <p class="book-card__p">Rating: {{ book.average_rating }}</p>
                                 <p class="book-card__p">Number of reviews: {{ book.reviews_count }}</p>
                                 {% if book.average_rating is Null %}
-                                <p class="book-card__p book-card__subtext">Provide a rating and write the first review for this book.</p>
+                                    <p class="book-card__p book-card__subtext">Provide a rating and write the first review for this book.</p>
                                 {% endif %}
                                 <a role="button" aria-pressed="true" href="/books/{{ book.id }}">Reviews</a>
                             </div>
-                    </div>
-                </div>
+                        </div>
                     {% endfor %}
+                </div>
             </div>
-        </div>
-
-        </div>
-    </section>
+        </section>
+    </div>
 {% endblock %}
