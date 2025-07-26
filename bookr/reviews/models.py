@@ -51,6 +51,11 @@ class Contributor(models.Model):
     email = models.EmailField(
         help_text='The contact email for the contributor'
     )
+
+    @property
+    def full_name(self):
+        return f'{self.first_names} {self.last_names}'
+        
     def __str__(self):
         return self.first_names
 
