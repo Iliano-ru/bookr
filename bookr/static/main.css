@@ -10,6 +10,10 @@ body{
     min-height: 100vh;
 }
 
+input[type="checkbox"]:checked{
+    accent-color: #2563eb;
+}
+
 .element-shadow {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: box-shadow 0.2s;
@@ -42,6 +46,11 @@ body{
 
 .bg-white{
     background: #f8f8fa;
+}
+
+.text-alert{
+color: rgba(255,0,0,0.75);
+
 }
 
 .text-azure{

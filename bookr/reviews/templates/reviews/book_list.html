@@ -14,10 +14,32 @@
             <div class="book-list">
                     <div class="search-wrapper bg-white element-shadow">
                         <form class="search-form" method="get">
-                            {{ form.search }}
-                            <input class="search-button" type="submit" value="Search">
+                            <div class="search-form-fields">
+                                {{ form.search }}
+                                <input class="search-button" type="submit" value="Search">
+                            </div>
+                            <div class="search-form-fields">
+                                <span>Search by:</span>
+                                <div class="search-form-field-wrapper">
+                                    <span class="text-grey">{{ form.title.label }}</span>
+                                    {{ form.title }}</div>
+                                    <div class="search-form-field-wrapper">
+                                        <span class="text-grey">{{ form.publisher.label }}</span>
+                                        {{ form.publisher }}
+                                    </div>
+                                    <div class="search-form-field-wrapper">
+                                        <span class="text-grey">{{ form.contributors.label }}</span>
+                                        {{ form.contributors }} 
+                                    </div>
+                                </div>
+                                {% if search %}
+                                <div class="search-form-field-wrapper">
+                                    <span class="text-alert">{{ form.non_field_errors.as_text }}</span>
+                                </div>
+                                {% endif %}
                         </form>
                     </div>
+                    {% if book_list %}
                     {% for book in book_list %}
                         <div class="book-card bg-white element-shadow">
                             <h2 class="book-card__title text-grey">{{ book.title }}</h2>
@@ -33,6 +55,10 @@
                             </div>
                         </div>
                     {% endfor %}
+                    {% endif %}
+                    {% if not book_list %}
+                    <p class="nothing_was_found">Nothing was found</p>
+                    {% endif %}
                 </div>
             </div>
         </section>

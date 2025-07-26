@@ -42,7 +42,21 @@
 .search-form{
     /* justify-content: space-between; */
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+    padding: 0 10px;
+    /* align-items: center; */
+}
+
+.search-form-fields{
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-form-field-wrapper{
+    display: flex;
+    gap: 5px;
     align-items: center;
 }
 
@@ -119,4 +133,11 @@
     margin-bottom: 0;
     font-weight: 400;
     letter-spacing: 0.2px;
+}
+
+.nothing_was_found{
+    font-size: 3.5rem;
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 100px;
 }
