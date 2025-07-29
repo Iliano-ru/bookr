@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'publishers/styles/main.css' %}">
+{% endblock %}
+{% block content %}
+<div class="h1-wrapper">
+    <h1 class="h1 text-white bg-grey">Publishers</h1>
+</div>
+<div class="section-1-wrapper bg-azure">
+    <section class="section-1">
+        <div class="publisher-list-wrapper">
+            <div class="publisher-list">
+                {% if publishers %}
+                {% for publisher in publishers %}
+                    <div class="publisher-card bg-white element-shadow">
+                        <h2 class="publisher-card__title text-grey">{{ publisher.name }}</h2>
+                        <div>
+                            <p class="publisher-card__p">Website: <a href="{{ publisher.website }}" target="_blank" class="publisher-link">{{ publisher.website }}</a></p>
+                            <p class="publisher-card__p">Email: <a href="mailto:{{ publisher.email }}" class="publisher-link">{{ publisher.email }}</a></p>
+                            <p class="publisher-card__p">Number of books: {{ publisher.book_set.count }}</p>
+                            <a role="button" aria-pressed="true" href="{% url 'publisher_edit' publisher.pk %}" class="edit-button">Edit</a>
+                        </div>
+                    </div>
+                {% endfor %}
+                {% endif %}
+                {% if not publishers %}
+                <p class="nothing_was_found">No publishers found</p>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
+

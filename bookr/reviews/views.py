@@ -1,9 +1,8 @@
-from turtle import title
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .forms import SearchForm
 from .models import Book, Publisher, BookContributor
 from .utils import average_rating
-from django.db.models import Q
+
 
 
 def book_list(request):
@@ -100,3 +99,4 @@ def book_details(request, pk):
         'reviews': reviews_list, 
         'book': book
     })
+
