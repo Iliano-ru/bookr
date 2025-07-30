@@ -18,7 +18,8 @@ def publisher_edit(request, pk=None):
             else:
                 messages.success(request, f'Publisher {updated_publisher} was successfully updated')
             return redirect('publisher_edit', updated_publisher.pk)
+
     else:
         form = PublisherForm(instance=publisher)
-        return render(request, 'publishers/publishers.html', {'form':form})
+    return render(request, 'publishers/publishers.html', {'form':form})
 

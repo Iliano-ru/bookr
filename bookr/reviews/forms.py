@@ -1,6 +1,7 @@
 from django import forms
 from django.utils.safestring import mark_safe
 from django.core.exceptions import ValidationError
+from .models import Publisher
 
 
 class SearchForm(forms.Form):
