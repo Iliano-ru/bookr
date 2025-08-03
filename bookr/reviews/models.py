@@ -21,21 +21,38 @@ class Book(models.Model):
         max_length=70,
         help_text='The title of the book'
     )
+
     publication_date = models.DateField(
         verbose_name='The date the book was published'
     )
+
     isbn = models.CharField(
         max_length=20,
         verbose_name='ISBN number of the book'
     )
+
     publisher = models.ForeignKey(
         Publisher,
         on_delete=models.CASCADE
     )
+
     contributors = models.ManyToManyField(
         'Contributor',
         through='BookContributor'
     )
+
+    @property
+    def average_rating(self):
+        reviews_list = self.review_set.all()
+        rating_list = [review.rating for review in reviews_list]
+        if not rating_list:
+            return None
+        return round(sum(rating_list) / len(rating_list), 2)
+
+    @property
+    def reviews_count(self):
+        return self.review_set.count()
+
     def __str__(self):
         return self.title
 

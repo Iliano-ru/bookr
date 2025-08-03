@@ -32,7 +32,7 @@
                                         {{ form.contributors }} 
                                     </div>
                                 </div>
-                                {% if search %}
+                                {% if request.GET.search %}
                                 <div class="search-form-field-wrapper">
                                     <span class="text-alert">{{ form.non_field_errors.as_text }}</span>
                                 </div>

@@ -18,6 +18,7 @@ class SearchForm(forms.Form):
 
     def clean(self):
         cleaned_data = super().clean()
-        
+        print(not cleaned_data.get('title') and not cleaned_data.get('publisher') and not cleaned_data.get('contributors'))
         if not cleaned_data.get('title') and not cleaned_data.get('publisher') and not cleaned_data.get('contributors'):
             self.add_error(None, 'At least one field must be selected')
+        return cleaned_data
